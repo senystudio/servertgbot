@@ -1,0 +1,7 @@
+aiogram
+Flask
+flask_wtf
+python-dotenv
+SQLAlchemy
+SQLAlchemy_serializer
+WTForms

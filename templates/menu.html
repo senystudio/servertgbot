@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="page_h1">Наше меню</h1>
+    <div id="menuWrap" class="menu-categories-wrap">
+      <div>
+        <div id="menuOuter" class="menu-categories-outer">
+          <div class="menu-categories">
+            <div class="menu-categories__wrap">
+              <div
+                title="Новинки"
+                class="menu-categories__item --no-left-padding"
+                id="new"
+              >
+                <span>Новинки</span>
+              </div>
+              <div title="Популярное" class="menu-categories__item" id="popular">
+                <span>Популярное</span>
+              </div>
+              <div title="Напитки" class="menu-categories__item" id="drinks">
+                <span>Напитки</span>
+              </div>
+              <div title="Комбо Обед" class="menu-categories__item" id="combo">
+                <span>Комбо Обед</span>
+              </div>
+              <div title="Бургеры и роллы" class="menu-categories__item" id="burgers">
+                <span>Бургеры и роллы</span>
+              </div>
+              <div
+                title="Картофель, стартеры и салаты"
+                class="menu-categories__item"
+                id="snacks"
+              >
+                <span>Картофель, стартеры и салаты</span>
+              </div>
+              <div title="Кафе" class="menu-categories__item" id="cafe">
+                <span>Кафе</span>
+              </div>
+              <div
+                title="Завтрак"
+                class="menu-categories__item"
+                id="breakfast"
+              >
+                <span>Завтрак</span>
+              </div>
+              <div class="menu-categories__more">
+                <span class="menu-categories__label">
+                  Еще
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    class="menu-categories__more-icon"
+                  >
+                    <path
+                      fill="#B69A81"
+                      fill-rule="evenodd"
+                      d="M12.06 6.176l-.266-.265a.5.5 0 00-.707 0L8 8.998 4.913 5.911a.5.5 0 00-.707 0l-.265.265L8 10.236l4.06-4.06z"
+                    ></path>
+                  </svg>
+                </span>
+                <div class="menu-categories__hidden-wrap">
+                  <div
+                    title="Кидз Комбо"
+                    class="menu-categories__item menu-categories__item_hidden"
+                    id="kids-combo"
+                  >
+                    <span>Кидз Комбо</span>
+                  </div>
+                  <div
+                    title="Десерты"
+                    class="menu-categories__item menu-categories__item_hidden"
+                    id="desserts"
+                  >
+                    <span>Десерты</span>
+                  </div>
+                  <div
+                    title="Соусы и другое"
+                    class="menu-categories__item menu-categories__item_hidden"
+                    id="other"
+                  >
+                    <span>Соусы и другое</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="base-grid-container menu-catalog" id="menu"></ul>
+    <script defer src="{{ url_for('static', filename='js/modals.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/horizontal_scroll.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/more.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/phone_scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/categories.js') }}"></script>
+
+{% endblock %}
